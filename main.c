@@ -1,6 +1,6 @@
 //
 //  main.c
-//  11_P1
+//  11_P2
 //
 //  Created by ok sojoung on 2023/11/16.
 //
@@ -9,15 +9,11 @@
 #include <stdlib.h>
 
 int main(void){
-    int     i = 10;
-    char    c = 'a';
+    int i = 300;
     
-    int*    iptr = &i;  // i의 주소
-    char*   cptr = &c;  // c의 주소
-    int*    iptr2 = iptr;
+    int* pi = &i;
+    char* pc = &i;
     
-    printf("i: %p\n%p (size:%i)\n", iptr, &i, sizeof(iptr));
-    printf("c: %p\n%p (size:%i)\n", cptr, &c, sizeof(cptr));
-    printf("iptr2: %p, %i\n", iptr2, *iptr2);
+    printf("%i, %i, %i\n",i,*pi,*pc);
     return 0;
 }
