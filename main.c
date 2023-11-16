@@ -1,6 +1,6 @@
 //
 //  main.c
-//  11_P2
+//  11_P3
 //
 //  Created by ok sojoung on 2023/11/16.
 //
@@ -8,12 +8,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void){
-    int i = 300;
+void swap(int *x, int *y) {
+    int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+int main(void) {
+    int a = 3;
+    int b = 5;
+    swap(&a,&b);
+    printf("a:%i, b:%i\n", a, b);
     
-    int* pi = &i;
-    char* pc = &i;
-    
-    printf("%i, %i, %i\n",i,*pi,*pc);
     return 0;
 }
